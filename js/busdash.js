@@ -11,7 +11,7 @@
     recordedAt = moment(j.recordedAtTime);
     doc = parseFloat(mvj.MonitoredCall.Extensions.Distances.DistanceFromCall);
     fem = Math.max(10000 - doc, 1000) / 5000;
-    s = "<div class='busJourney " + status + "' style=\"font-size: " + fem + "em\">\n<!--		<div class=\"background\" style=\"width: " + (doc / 50) + ";\"></div> -->\n	<div class='PublishedLineName'>" + mvj.PublishedLineName + "</div>\n	<div class='PresentableDistance'>" + mvj.MonitoredCall.Extensions.Distances.PresentableDistance + "</div>\n	<div class=\"DistanceFromCall\">" + mvj.MonitoredCall.Extensions.Distances.DistanceFromCall + "m away</div>\n	<div class='ProgressRate'>" + mvj.ProgressRate + "</div>\n	<div class='RecordedAtTime'>Checked: " + (recordedAt.fromNow()) + "</div>\n</div>";
+    s = "<div class='busJourney " + status + "' style=\"font-size: " + fem + "em\">\n	<div class='PublishedLineName'>" + mvj.PublishedLineName + "</div>\n	<div class='PresentableDistance'>" + mvj.MonitoredCall.Extensions.Distances.PresentableDistance + "</div>\n	<div class=\"DistanceFromCall\">" + mvj.MonitoredCall.Extensions.Distances.DistanceFromCall + "m away</div>\n	<div class='ProgressRate'>" + mvj.ProgressRate + "</div>\n	<div class='RecordedAtTime'>Checked: " + (recordedAt.fromNow()) + "</div>\n</div>";
     return s;
   };
 

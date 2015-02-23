@@ -7,7 +7,6 @@ busdash.stringifyMVJ = (j) ->
 	fem = (Math.max(10000 - doc, 1000) / 5000)
 	s = """
 	<div class='busJourney #{status}' style="font-size: #{fem}em">
-<!--		<div class="background" style="width: #{ doc / 50 };"></div> -->
 		<div class='PublishedLineName'>#{ mvj.PublishedLineName }</div>
 		<div class='PresentableDistance'>#{ mvj.MonitoredCall.Extensions.Distances.PresentableDistance }</div>
 		<div class="DistanceFromCall">#{ mvj.MonitoredCall.Extensions.Distances.DistanceFromCall }m away</div>
@@ -20,7 +19,6 @@ busdash.stringifyMVJ = (j) ->
 busdash.printMSVS = (msvs) ->
 	_.each msvs, (msv) ->
 		$('<div />').html(busdash.stringifyMVJ(msv)).appendTo '#buses'
-
 
 busdash.writeStopStatusForBus = (STOP_ID, BUSNAMES) ->
 
@@ -48,6 +46,6 @@ $(document).ready ->
 	busdash.writeStopStatusForBus settings.stop_id, settings.buses
 
 	setTimeout ->
-	   window.location.reload(1);
+		window.location.reload(1);
 	, 30000
 
