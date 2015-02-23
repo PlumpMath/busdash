@@ -1,0 +1,4 @@
+settings = {};
+settings.apikey = 'BUSTIME APIKEY'; // get it here: http://bustime.mta.info/wiki/Developers/Index
+settings.stop_id = 'STOPID'; // number only without 'MTA_' prefix. Ex: 112233
+settings.buses = ['BUS1', 'BUS2'] 
